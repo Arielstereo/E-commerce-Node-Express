@@ -1,0 +1,56 @@
+<div class="container-fluid">
+
+  <div class="row flex-lg-row align-items-center py-5 m-5">
+    <div class="col-lg-6 col-sm-12">
+      <div class="card p-2">
+        
+      <img class="img-fluid p-3" src="/images/signup.jpg" alt="" />
+
+        
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-10">
+      <form class="m-5" method="POST" action="/signup">
+
+        <h1 class="h3 mb-3 fw-normal text-center">Please signup</h1>
+        <div class="form-floating m-3">
+          <input type="text" name="username" class="form-control" placeholder="username" autofocus />
+          <label for="username">Username</label>
+        </div>
+        <div class="form-floating m-3">
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="name@example.com"
+          />
+          <label for="email">Email</label>
+        </div>
+        <div class="form-floating m-3">
+          <input
+            type="password"
+            class="form-control"
+            name="pass"
+            placeholder="Password"
+          />
+          <label for="pass">Password</label>
+        </div>
+        <div class="form-floating m-3">         
+        <select class="form-select form-select-sm" aria-label=".form-select-sm" name="country">
+          <option selected>Select your country</option>
+          <option value="1">Argentina</option>
+          <option value="2">Uruguay</option>
+          <option value="3">Chile</option>
+        </select>
+          
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+        <p class="mt-5 mb-3 text-muted text-center">© 2021</p>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
