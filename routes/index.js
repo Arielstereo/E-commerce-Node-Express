@@ -3,6 +3,6 @@ const router = express.Router();
 
 
 
-router.get('/', (req, res) => res.render('index', {title: 'E-flight'}));
+router.get('/', (req, res) => res.render('index', {title: 'Welcome to E-flight'}));
 
 module.exports = router;
