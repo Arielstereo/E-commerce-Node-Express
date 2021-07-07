@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const dotenv = require('dotenv');
 const session = require('express-session');
+const {verifyUser} = require('./middlewares/authSession');
 
 
 
@@ -38,7 +39,7 @@ app.use(session({
 app.use('/', index);
 app.use('/signin', signin);
 app.use('/signup', signup);
-app.use('/travels', travels);
+app.use('/travels', verifyUser, travels);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
