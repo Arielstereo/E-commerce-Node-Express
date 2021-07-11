@@ -7,4 +7,13 @@ const verifyUser = (req, res, next) => {
     }
 }
 
-module.exports = {verifyUser};
+const verifyAdmin = (req, res, next) => {
+    if(req.session.admin == 1){
+        next();
+    }
+    else{
+        res.render('login/signin', {message: 'Please login as admin'});
+    }
+}
+
+module.exports = {verifyUser, verifyAdmin};

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const sha1 = require('sha1');
 const model = require('./../models/users');
+const {validateSignin} = require('./../middlewares/validateUsers');
 
 const login = async (req, res) => {
     let {username, pass} = req.body;
@@ -12,13 +13,14 @@ const login = async (req, res) => {
         }
     else {
         
-        const [{id}] = logged;
+        const [{id, admin}] = logged;
         req.session.user = id;
+        req.session.admin = admin;
         
         res.redirect('/travels');
     }
 
-}
+}   
 
 
 
@@ -26,5 +28,5 @@ const login = async (req, res) => {
 
 
 router.get('/', (req, res) => res.render('login/signin'));
-router.post('/', login);
+router.post('/', validateSignin, login);
 module.exports = router;

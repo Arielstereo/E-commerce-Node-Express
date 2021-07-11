@@ -7,7 +7,7 @@ const create = async (obj) => {
 }
    
 const auth = async (username, pass) => {
-    const query = "SELECT id FROM ?? WHERE username = ? AND pass = ? AND confirmEmail = 1"
+    const query = "SELECT id, admin FROM ?? WHERE username = ? AND pass = ? AND confirmEmail = 1"
     const params = [process.env.T_USERS, username, pass];
     return await pool.query(query, params);
 }

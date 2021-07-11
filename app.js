@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const dotenv = require('dotenv');
 const session = require('express-session');
-const {verifyUser} = require('./middlewares/authSession');
+const {verifyUser, verifyAdmin} = require('./middlewares/authSession');
 
 
 
@@ -14,6 +14,8 @@ const index = require('./routes/index');
 const signin = require('./routes/signin');
 const signup = require('./routes/signup');
 const travels = require('./routes/travels');
+const admin = require('./routes/admin');
+const products = require('./routes/admin/products');
 
 
 const app = express();
@@ -40,6 +42,8 @@ app.use('/', index);
 app.use('/signin', signin);
 app.use('/signup', signup);
 app.use('/travels', verifyUser, travels);
+app.use('/admin', verifyAdmin, admin);
+app.use('/admin/products', products);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

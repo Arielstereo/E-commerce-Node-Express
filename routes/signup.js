@@ -4,6 +4,7 @@ const model = require('../models/users');
 const sha1 = require('sha1');
 const {v4: uuid} = require('uuid');
 const { send } = require('./../services/mail');
+const {validateSignup}  = require('./../middlewares/validateUsers');
 
 const createUser = async (req, res) => {
     const user = req.body;
@@ -36,7 +37,7 @@ const verify = async (req, res) => {
 
 
 router.get('/', (req, res) => res.render('login/signup'));
-router.post('/', createUser);
+router.post('/', validateSignup, createUser);
 router.get('/verify/:uid', verify);
 
 module.exports = router;
