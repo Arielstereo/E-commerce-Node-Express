@@ -1,0 +1,40 @@
+
+  <header class="container-fluid">
+    
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+     
+      <h1>Europa</h1>
+      <p class="fs-5 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam hic omnis, doloremque commodi neque sint voluptates consequuntur. Earum temporibus aperiam assumenda consequatur totam inventore, dignissimos magnam voluptates veniam eos doloremque?</p>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="row row-cols-md-4 mb-3 text-center">
+     
+      
+        {{#each products}}
+        <div class="card card-travel m-2 p-3 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">{{city}}</h4>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title pricing-card-title">{{price}}</h3>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><img class="img-fluid" src="/images/{{uid}}" alt="img"></li>  
+              <li>{{description}}</li>
+              
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Contacto</button>
+          </div>
+        </div>
+          {{/each}}
+      
+    </div>
+
+    
+  
+  </main>
+
+  

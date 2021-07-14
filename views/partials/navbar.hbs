@@ -1,16 +1,27 @@
 <div class="d-flex flex-column flex-md-row align-items-center pb-3 m-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-       <img class="logo img-fluid"  src="/images/logo.png" alt="">
+       <img class="logo img-fluid"  src="/images/logo.png" alt="logo">
         <span class="fs-4">E-flight</span>
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/">Home</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/signin">Signin</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/signup">Signup</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/usa">USA</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/usa">Caribe</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/usa">Europa</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="/usa">Sudamerica</a>
+        
+        <a class="btn btn-outline-success me-3 py-2 text-dark text-decoration-none" href="/signin">Signin</a>
+        <a class="btn btn-outline-danger me-3 py-2 text-dark text-decoration-none" href="/signup">Signup</a>
+         <li class="nav-item dropdown list-unstyled">
+          <a class="nav-link dropdown-toggle text-dark" href="/travels" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Travels
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="/travels/usa">USA</a></li>
+            <li><a class="dropdown-item" href="/travels/caribe">Caribe</a></li>
+            <li><a class="dropdown-item" href="/travels/euro">Europa</a></li>
+            <li><a class="dropdown-item" href="/travels/sudamerica">Sudamerica</a></li>
+
+          </ul>
+        </li>
       </nav>
 </div>
+
+
+        

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const sha1 = require('sha1');
-const model = require('./../models/users');
-const {validateSignin} = require('./../middlewares/validateUsers');
+const model = require('./../../models/users');
+const {validateSignin} = require('./../../middlewares/validateUsers');
 
 const login = async (req, res) => {
     let {username, pass} = req.body;
@@ -17,7 +17,7 @@ const login = async (req, res) => {
         req.session.user = id;
         req.session.admin = admin;
         
-        res.redirect('/Welcome');
+        res.redirect('/travels');
     }
 
 }   

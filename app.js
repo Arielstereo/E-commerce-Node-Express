@@ -12,10 +12,16 @@ const {verifyUser, verifyAdmin} = require('./middlewares/authSession');
 dotenv.config();
 //Routes
 const index = require('./routes/index');
-const signin = require('./routes/signin');
-const signup = require('./routes/signup');
-const usa = require('./routes/usa');
-const welcome = require('./routes/welcome');
+
+const signin = require('./routes/login/signin');
+const signup = require('./routes/login/signup');
+
+const travels = require('./routes/travels');
+const usa = require('./routes/travels/usa');
+const euro = require('./routes/travels/euro');
+const caribe = require('./routes/travels/caribe');
+const sudamerica = require('./routes/travels/sudamerica');
+
 const admin = require('./routes/admin');
 const products = require('./routes/admin/products');
 
@@ -44,8 +50,11 @@ app.use(session({
 app.use('/', index);
 app.use('/signin', signin);
 app.use('/signup', signup);
-app.use('/usa', verifyUser, usa);
-app.use('/welcome', verifyUser, welcome);
+app.use('/travels', verifyUser, travels);
+app.use('/travels/usa', usa);
+app.use('/travels/euro', euro);
+app.use('/travels/caribe', caribe);
+app.use('/travels/sudamerica', sudamerica);
 app.use('/admin', verifyAdmin, admin);
 app.use('/admin/products', products);
 

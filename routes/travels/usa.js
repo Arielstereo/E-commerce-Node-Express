@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const model = require('../models/products');
+const model = require('./../../models/products');
+
 
 
 const getAll = async(req, res) => {
     const products = await model.getUSA();
-    res.render('usa', {products})
+    res.render('travels/usa', {products})
 }
 
 

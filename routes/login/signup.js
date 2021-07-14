@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const model = require('../models/users');
+const model = require('./../../models/users');
 const sha1 = require('sha1');
 const {v4: uuid} = require('uuid');
-const { send } = require('./../services/mail');
-const {validateSignup}  = require('./../middlewares/validateUsers');
+const { send } = require('./../../services/mail');
+const {validateSignup}  = require('./../../middlewares/validateUsers');
 
 const createUser = async (req, res) => {
     const user = req.body;
