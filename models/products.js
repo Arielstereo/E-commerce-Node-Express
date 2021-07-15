@@ -6,6 +6,16 @@ const create = (obj) =>
 const createImg = (obj) =>
     pool.query("INSERT INTO ?? SET ?", [process.env.T_IMAGES, obj]).then(response => response).catch(err => console.error(err));
 
+const getAll = async() => {
+    try {
+        const query = "SELECT p.id, p.city, p.id_category FROM ?? AS p WHERE p.removed= 0";
+        const params = [process.env.T_PRODUCTS];
+        return await pool.query(query, params);
+    } catch (error) {
+        console.error(error);
+    }
+}    
+
 const getUSA = async() => {
     try {
         const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%USA%' AND p.removed = 0";
@@ -54,7 +64,9 @@ const getCaribe = async() => {
 
 
 
-module.exports = {create, createImg, getUSA, getEuro, getSudam, getCaribe};
+
+
+module.exports = {create, createImg, getUSA, getEuro, getSudam, getCaribe, getAll};
 
 
 

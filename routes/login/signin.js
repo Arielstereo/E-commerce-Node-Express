@@ -9,7 +9,7 @@ const login = async (req, res) => {
     pass = sha1(pass);
     const logged = await model.auth(username, pass);
     if(logged.length === 0) {
-        res.render('login/signin', { message: '* User or password does not exist!'})
+        res.render('login/signin', { message: '* El usuario y/o contraseña no son válidos!'})
         }
     else {
         

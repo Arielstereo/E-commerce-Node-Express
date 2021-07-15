@@ -5,7 +5,7 @@ const allowExtensions = ["png", "jpg", "jpeg"];
 const saveFile = ({mimetype, path}, allowE, destFolder = `./public/images`) => {
     try{
     const [type, extension] = mimetype.split("/");
-    if(!allowE.includes(extension)) throw "Incorrect format";
+    if(!allowE.includes(extension)) throw "Formato incorrecto";
     const uid = uuid();
     const fileName = `${uid}.${extension}`;
     const fileNameOut = `${destFolder}/${fileName}`;

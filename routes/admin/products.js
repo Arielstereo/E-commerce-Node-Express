@@ -11,9 +11,14 @@ const create = async(req, res) => {
     res.redirect('/travels');
 }
 
+const getProducts = async(req, res) => {
+    const products = await model.getAll();
+    res.render('admin/updateProduct', {products});
+}
 
 
 router.get('/create', (req, res) => res.render('admin/createProducts'));
 router.post('/create', upload.single("img"), create);
+router.get('/update', getProducts);
 
 module.exports = router;

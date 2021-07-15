@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-const send = async({mail, subject = 'Thanks for registering', body}) => {
+const send = async({mail, subject = 'Gracias por registrarse!', body}) => {
     try {
         const transporter = nodemailer.createTransport({
             service: process.env.MAIL_SERVICE,

@@ -3,7 +3,7 @@ const verifyUser = (req, res, next) => {
         next();
     }
     else {
-        res.render('login/signin', {message: 'Please login'})
+        res.render('login/signin', {message: '* Inicie sesión por favor!'})
     }
 }
 
@@ -12,7 +12,7 @@ const verifyAdmin = (req, res, next) => {
         next();
     }
     else{
-        res.render('login/signin', {message: 'Please login as admin'});
+        res.render('login/signin', {message: '* Inicie sesión como administrador'});
     }
 }
 
