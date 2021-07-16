@@ -16,9 +16,15 @@ const getProducts = async(req, res) => {
     res.render('admin/updateProduct', {products});
 }
 
+const getProduct = async(req, res) => {
+    const [product] = await model.getSingle(req.params.id);
+    res.render('admin/editProduct', {product});
+}
+
 
 router.get('/create', (req, res) => res.render('admin/createProducts'));
 router.post('/create', upload.single("img"), create);
 router.get('/update', getProducts);
+router.get('/edit/:id', getProduct);
 
 module.exports = router;

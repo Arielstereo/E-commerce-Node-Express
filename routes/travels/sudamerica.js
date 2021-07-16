@@ -4,7 +4,7 @@ const model = require('./../../models/products');
 
 
 
-const getAll = async(req, res) => {
+const get = async(req, res) => {
     const products = await model.getSudam();
     res.render('travels/sudamerica', {products})
 }
@@ -12,6 +12,6 @@ const getAll = async(req, res) => {
 
 
 
-router.get('/', getAll);
+router.get('/', get);
 
 module.exports = router;

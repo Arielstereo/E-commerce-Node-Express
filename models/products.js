@@ -8,8 +8,8 @@ const createImg = (obj) =>
 
 const getAll = async() => {
     try {
-        const query = "SELECT p.id, p.city, p.id_category FROM ?? AS p WHERE p.removed= 0";
-        const params = [process.env.T_PRODUCTS];
+        const query = "SELECT p.id, p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE p.removed = 0";
+        const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY];
         return await pool.query(query, params);
     } catch (error) {
         console.error(error);
@@ -56,17 +56,25 @@ const getCaribe = async() => {
         return await pool.query(query, params);
     } catch (error) {
         console.error(error);
-        
     }
 }    
 
+const getSingle = async(id) => {
+    try {
+        const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE p.removed = 0 AND p.id= ?";
+        const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY,id];
+        return await pool.query(query, params);  
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 
 
 
 
 
-module.exports = {create, createImg, getUSA, getEuro, getSudam, getCaribe, getAll};
+module.exports = {create, createImg, getUSA, getEuro, getSudam, getCaribe, getAll, getSingle};
 
 
 

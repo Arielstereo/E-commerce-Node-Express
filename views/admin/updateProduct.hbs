@@ -5,16 +5,16 @@
         <tr>
             <th>id</th>
             <th>Destino</th>
-            <th>id_categoria</th>
+            <th>Imagen</th>
             <th>Editar</th>
             <th>Eliminar</th>
         </tr>
         {{#each products}}
         <tr>
             <td>{{id}}</td>
-            <td>{{city}}</td>
-            <td>{{id_category}}</td>
-            <td> <a href="" class="btn btn-success" ><i class='bx bxs-edit bx-sm' style='color:#ffffff;'  ></i></a> </td>
+            <td>{{city}}</td>     
+            <td><img class="img-fluid" src="/images/{{uid}}" alt="img"></td>   
+            <td> <a href="/admin/products/edit/{{id}}" class="btn btn-success" ><i class='bx bxs-edit bx-sm' style='color:#ffffff;'  ></i></a> </td>
             <td> <a href="" class="btn btn-danger"><i class='bx bxs-x-circle bx-sm' style='color:#ffffff'  ></i></a> </td>
         </tr>    
         {{/each}}
