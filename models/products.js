@@ -61,7 +61,7 @@ const getCaribe = async() => {
 
 const getSingle = async(id) => {
     try {
-        const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid, c.name_categ FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE p.removed = 0 AND p.id= ?";
+        const query = "SELECT p.id, p.city, p.description, p.price, p.id_category, i.uid, c.name_categ FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE p.removed = 0 AND p.id= ?";
         const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY,id];
         return await pool.query(query, params);  
     } catch (error) {

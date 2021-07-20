@@ -14,7 +14,7 @@ const showCreate = async (req, res) => {
 
 const create = async(req, res) => {
     const idImg = await service.createProduct(req.body, req.file);
-    res.redirect('/travels');
+    res.redirect('/admin/products');
 }
 
 const getProducts = async(req, res) => {
