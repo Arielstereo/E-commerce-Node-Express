@@ -1,7 +1,7 @@
 <div class="container-fluid" style="height : 100vh">
     <div class="row justify-content-center align-items-center" style="height : 100vh">
         <div class="col-4 text-dark">
-            <form method="POST" action="/admin/products/edit/{{product.id}}" enctype="multipart/form-data">
+            <form method="POST" action="/admin/products/update/{{product.id}}" enctype="multipart/form-data">
                 <div class="form-floating m-3">
                     <input type="text" class="form-control" name="city" value="{{product.city}}" placeholder="City" >
                     <label for="city">Ciudad</label>
@@ -19,11 +19,11 @@
                 <div class="form-floating m-3">         
                     <select class="form-select form-select-sm" aria-label=".form-select-sm" name="id_category">
 
-                    <option selected>Destino</option>
-                    <option value="1">Caribe</option> 
-                    <option value="2">Europa</option>
-                    <option value="3">USA</option>
-                    <option value="4">Sudamerica</option>
+                   
+                    <option value="{{product.id_category}}">{{product.name_categ}}</option> 
+                    {{#each category}}
+                    <option value="{{id}}">{{name_categ}}</option>
+                    {{/each}}
 
 
                     </select>

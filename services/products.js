@@ -1,4 +1,4 @@
-const {create, createImg} = require('./../models/products');
+const {create, createImg, update, updateImg} = require('./../models/products');
 const {imgFile} = require('./../utils/fileHandler');
 
 const createProduct = async(body, file) => {
@@ -14,7 +14,27 @@ const createProduct = async(body, file) => {
     }
 }
 
-module.exports = {createProduct};
+const updateProduct = async(id, body, file) => {
+    try {
+        const id_product = await update(id, body);
+        if(file) {
+            const uid = imgFile(file);
+            const obj = {uid};
+            const idImg = await updateImg(id, obj);
+            return idImg;
+        }
+        else {
+            return id_product;
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+
+
+module.exports = {createProduct, updateProduct};
 
 
 

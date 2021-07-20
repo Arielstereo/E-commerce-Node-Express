@@ -16,12 +16,11 @@
                 </div>
                 <div class="form-floating m-3">         
                     <select class="form-select form-select-sm" aria-label=".form-select-sm" name="id_category">
-                    <option selected>Destino</option>
-                    <option value="1">Caribe</option> 
-                    <option value="2">Europa</option>
-                    <option value="3">USA</option>
-                    <option value="4">Sudamerica</option>
-
+                    {{#each category}}    
+                  
+                    <option value="{{id}}">{{name_categ}}</option> 
+                   
+                    {{/each}}
 
                     </select>
           

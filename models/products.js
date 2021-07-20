@@ -61,9 +61,49 @@ const getCaribe = async() => {
 
 const getSingle = async(id) => {
     try {
-        const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE p.removed = 0 AND p.id= ?";
+        const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid, c.name_categ FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE p.removed = 0 AND p.id= ?";
         const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY,id];
         return await pool.query(query, params);  
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const update = async(id, obj) => {
+    try {
+        const query = "UPDATE ?? SET ? WHERE id = ?";
+        const params = [process.env.T_PRODUCTS, obj, id];
+        return await pool.query(query, params);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const updateImg = async(id, obj) => {
+    try {
+        const query = "UPDATE ?? SET ? WHERE id_product = ?";
+        const params = [process.env.T_IMAGES, obj, id];
+        return await pool.query(query, params);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const delProduct = async(id) => {
+    try {
+        const query = "UPDATE ?? SET removed = 1 WHERE id = ?";
+        const params = [process.env.T_PRODUCTS, id];
+        return await pool.query(query, params);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const delImg = async(id) => {
+    try {
+        const query = "UPDATE ?? SET removed = 1 WHERE id_product = ?";
+        const params = [process.env.T_IMAGES, id];
+        return await pool.query(query, params);
     } catch (error) {
         console.error(error);
     }
@@ -72,9 +112,7 @@ const getSingle = async(id) => {
 
 
 
-
-
-module.exports = {create, createImg, getUSA, getEuro, getSudam, getCaribe, getAll, getSingle};
+module.exports = {create, createImg, getUSA, getEuro, getSudam, getCaribe, getAll, getSingle, update, updateImg, delProduct, delImg};
 
 
 
