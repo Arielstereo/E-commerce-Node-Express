@@ -18,5 +18,11 @@ const verify = async(uid) => {
     return await pool.query(query, params); 
 }
 
+const getUser = async(id) => {
+    const query = "SELECT * FROM ?? WHERE id = ?";
+    const params = [process.env.T_USERS, id];
+    return await pool.query(query, params);
+}
 
-module.exports = {create, auth, verify};
+
+module.exports = {create, auth, verify, getUser};
