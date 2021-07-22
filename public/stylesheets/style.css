@@ -5,6 +5,7 @@ body {
   font-family: 'Righteous';
   background-image: url("/images/index.jpg");
   background-size: cover;
+  color: #0169A6;
   
 
 }
@@ -31,5 +32,9 @@ form {
 
 .carousel{
   width:60%;
+}
+
+a {
+  text-decoration: none;
 }
 
