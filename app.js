@@ -21,6 +21,7 @@ const usa = require('./routes/travels/usa');
 const euro = require('./routes/travels/euro');
 const caribe = require('./routes/travels/caribe');
 const sudamerica = require('./routes/travels/sudamerica');
+const buy = require('./routes/travels/buy');
 
 const admin = require('./routes/admin');
 const products = require('./routes/admin/products');
@@ -55,6 +56,7 @@ app.use('/travels/usa', usa);
 app.use('/travels/euro', euro);
 app.use('/travels/caribe', caribe);
 app.use('/travels/sudamerica', sudamerica);
+app.use('/travels/buy', buy);
 app.use('/admin', verifyAdmin, admin);
 app.use('/admin/products', products);
 

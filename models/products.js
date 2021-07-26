@@ -18,7 +18,7 @@ const getAll = async() => {
 
 const getUSA = async() => {
     try {
-        const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%USA%' AND p.removed = 0";
+        const query = "SELECT p.id, p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%USA%' AND p.removed = 0";
         const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY];
         return await pool.query(query, params);
     } catch (error) {
@@ -29,7 +29,7 @@ const getUSA = async() => {
 
 const getEuro = async() => {
     try {
-        const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%Europa%' AND p.removed = 0";
+        const query = "SELECT p.id, p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%Europa%' AND p.removed = 0";
         const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY];
         return await pool.query(query, params);
     } catch (error) {
@@ -40,7 +40,7 @@ const getEuro = async() => {
 
 const getSudam = async() => {
     try {
-        const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%Sudamerica%' AND p.removed = 0";
+        const query = "SELECT p.id, p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%Sudamerica%' AND p.removed = 0";
         const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY];
         return await pool.query(query, params);
     } catch (error) {
@@ -51,7 +51,7 @@ const getSudam = async() => {
 
 const getCaribe = async() => {
     try {
-        const query = "SELECT p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%Caribe%' AND p.removed = 0";
+        const query = "SELECT p.id, p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE c.name_categ LIKE '%Caribe%' AND p.removed = 0";
         const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY];
         return await pool.query(query, params);
     } catch (error) {

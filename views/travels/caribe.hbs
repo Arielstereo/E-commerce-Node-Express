@@ -1,5 +1,16 @@
+<header class="container-fluid">
+  <div class="d-flex flex-column flex-md-row align-items-center pb-3 m-4 border-bottom">
 
-  <header class="container-fluid">
+  
+        <i class='logo-user bx bx-lg bxs-user-circle bx-burst me-3' style='color: #0169A6;'></i>
+        <span class="fs-4">{{user.username}}</span>
+        <span class="ms-3 text-muted">({{user.email}})</span>
+
+      <nav class="d-flex mt-2 mt-md-0 ms-md-auto"></nav>
+      
+        
+      </nav>
+  </div>
     
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
@@ -7,7 +18,7 @@
       <h1>Caribe</h1>
       <p class="fs-5 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam hic omnis, doloremque commodi neque sint voluptates consequuntur. Earum temporibus aperiam assumenda consequatur totam inventore, dignissimos magnam voluptates veniam eos doloremque?</p>
     </div>
-  </header>
+</header>
 
   <main class="container">
     
@@ -26,7 +37,8 @@
               <li>{{description}}</li>
               
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">Reservar</button>
+            <a href="/travels/caribe/reserve/{{id}}" class="w-100 btn btn-lg btn-primary">Reservar</a>
+            
           </div>
         </div>
           {{/each}}
