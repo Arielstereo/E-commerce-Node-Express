@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="container">
+
+    <table class="table table-dark table-striped table-hover m-5">
+        <tr>
+            <th>Legajo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Sector</th>
+            <th>Baja</th>
+            <th>Editar</th>
+            
+        </tr>
+        {{#each employees}}
+        <tr>
+            <td>{{file_number}}</td>
+            <td>{{name}}</td>
+            <td>{{surname}}</td>
+            <td>{{sector}}</td>
+            <td> <a href="/admin/employees/delete/{{id}}" class="btn btn-danger"><i class='bx bxs-x-circle bx-sm' style='color:#ffffff'  ></i></a> </td>
+            <td> <a href="/admin/employees/update/{{id}}" class="btn btn-success" ><i class='bx bxs-edit bx-sm' style='color:#ffffff;'  ></i></a> </td>
+
+                  
+               
+        </tr>    
+        {{/each}}
+    </table>
+
+    </div>
+
+</div>

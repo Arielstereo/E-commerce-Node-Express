@@ -24,5 +24,10 @@ const getUser = async(id) => {
     return await pool.query(query, params);
 }
 
+const editUser = async(id, obj) => {
+    const query = "UPDATE ?? SET ? WHERE id = ?";
+    const params = [process.env.T_USERS, obj, id];
+    return await pool.query(query, params);
+}
 
-module.exports = {create, auth, verify, getUser};
+module.exports = {create, auth, verify, getUser, editUser};

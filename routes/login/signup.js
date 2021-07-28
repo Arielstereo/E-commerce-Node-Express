@@ -20,8 +20,11 @@ const createUser = async (req, res) => {
    const  addUser = await model.create(userDB);
     send({
         mail: userDB.email,
-        body: `<h1> Bienvenido ${userDB.username}</h1>
-        <a href="${process.env.URL_SERVER}:${process.env.URL_PORT}/signup/verify/${userDB.authEmail}">Link enable!</a>`
+        subject: 'Bienvenido a E-flight',
+        body: `🛫 <span class="fs-4">E-flight</span>
+        <h1> Bienvenido ${userDB.username}!</h1>
+        <h2>Gracias por registrarte en E-flight, para activar tu usuario ingresa al siguiente enlace: </h2>
+        <a href="${process.env.URL_SERVER}:${process.env.URL_PORT}/signup/verify/${userDB.authEmail}">Validar email</a>`
 
     });
     res.redirect('/signin');

@@ -16,6 +16,8 @@ const index = require('./routes/index');
 const signin = require('./routes/login/signin');
 const signup = require('./routes/login/signup');
 
+const user = require('./routes/user');
+
 const travels = require('./routes/travels');
 const usa = require('./routes/travels/usa');
 const euro = require('./routes/travels/euro');
@@ -25,6 +27,7 @@ const buy = require('./routes/travels/buy');
 
 const admin = require('./routes/admin');
 const products = require('./routes/admin/products');
+const employees = require('./routes/admin/employees');
 
 
 
@@ -51,6 +54,7 @@ app.use(session({
 app.use('/', index);
 app.use('/signin', signin);
 app.use('/signup', signup);
+app.use('/user', verifyUser, user);
 app.use('/travels', verifyUser, travels);
 app.use('/travels/usa', usa);
 app.use('/travels/euro', euro);
@@ -59,6 +63,7 @@ app.use('/travels/sudamerica', sudamerica);
 app.use('/travels/buy', buy);
 app.use('/admin', verifyAdmin, admin);
 app.use('/admin/products', products);
+app.use('/admin/employees', employees);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

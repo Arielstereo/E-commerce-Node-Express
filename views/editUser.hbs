@@ -1,0 +1,32 @@
+<div class="container-fluid" style="height : 100vh">
+    <div class="row justify-content-center align-items-center" style="height : 100vh">
+        <div class="col-4 text-dark">
+            <form method="POST" action="/user/edit/{{user.id}}">
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control" name="username" value="{{user.username}}" placeholder="Nombre" >
+                    <label for="username">Nombre</label>
+                </div>
+                 <div class="form-floating m-3">         
+                <select class="form-select form-select-sm" aria-label=".form-select-sm" name="country">
+                <option selected>Pais</option>
+                <option value="argentina">Argentina</option>
+                <option value="brasil">Brasil</option>
+                <option value="chile">Chile</option>
+                <option value="chile">Paraguay</option>
+                <option value="peru">Peru</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="chile">Venezuela</option>
+                </select>
+                
+                </div>
+
+                
+              
+                <div class="d-grid gap-2">
+                    <button class="btn btn-dark mt-3">Editar Usuario</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

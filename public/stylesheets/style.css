@@ -6,8 +6,7 @@ body {
   background-image: url("/images/index.jpg");
   background-size: cover;
   color: #0169A6;
-  
-
+  box-sizing: border-box;
 }
 
 form {
@@ -31,7 +30,8 @@ form {
 }
 
 .carousel{
-  width:60%;
+  width:90%;
+  height: 100%;
 }
 
 a {

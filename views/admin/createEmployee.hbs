@@ -1,0 +1,29 @@
+<div class="container-fluid" style="height : 100vh">
+    <div class="row justify-content-center align-items-center" style="height : 100vh">
+        <div class="col-4 text-dark">
+            <form method="POST" action="/admin/employees/create">
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control" name="name" placeholder="Nombre" >
+                    <label for="name">Nombre</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control" name="surname" placeholder="Apellido">
+                    <label for="Apellido">Apellido</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="number" class="form-control" name="file_number" placeholder="Legajo n°">
+                    <label for="file_number">Legajo n°</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" class="form-control" name="sector" placeholder="Sector">
+                    <label for="sector">Sector</label>
+                </div>
+              
+                <div class="d-grid gap-2">
+                    <button class="btn btn-info mt-3">Agregar Empleado</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
