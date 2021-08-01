@@ -21,12 +21,13 @@ form {
 
 }
 
-.table {
-  width: 400px;
+.table-info {
+  width: 600px;
+  margin-left: 150px;
 }
 
-.logo-user {
-  font-size: 40px;
+.bx {
+  font-size: 60px;
 }
 
 .carousel{
@@ -38,3 +39,32 @@ a {
   text-decoration: none;
 }
 
+.img-form_product {
+  height: 400px;
+  width: 1000px;
+  
+}
+
+.form-product {
+  width:400px;
+}
+
+.img_form_emp {
+  height: 400px;
+  width: 800px;
+}
+
+.form-emp {
+  width: 400px;
+}
+
+.img_table_emp {
+  height: 400px;
+  width: 600px;
+}
+
+.table-dark {
+  width: 500px;
+  padding: 150px;
+  margin: 100px;
+}

@@ -1,7 +1,11 @@
 <div class="container-fluid" style="height : 100vh">
-    <div class="row justify-content-center align-items-center" style="height : 100vh">
-        <div class="col-4 text-dark">
-            <form method="POST" action="/admin/employees/create">
+     <h1 class="text-center border-bottom p-5 m-3" >Altas de empleados</h1>
+    <div class="row d-flex justify-content-center mt-5" style="height : 100vh">
+        <div class="col-4">
+            <img class="img-fluid img_form_emp" src="/images/form_emp.svg" alt="">
+        </div>
+        <div class="col-4">
+            <form class="form-emp" method="POST" action="/admin/employees/create">
                 <div class="form-floating m-3">
                     <input type="text" class="form-control" name="name" placeholder="Nombre" >
                     <label for="name">Nombre</label>
