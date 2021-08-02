@@ -1,24 +1,22 @@
-
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Righteous';
+  font-family: "Righteous";
   background-image: url("/images/index.jpg");
   background-size: cover;
-  color: #0169A6;
+  color: #0169a6;
   box-sizing: border-box;
 }
 
 form {
   width: 550px;
 }
-.logo{
+.logo {
   height: 80px;
 }
 
-.card-travel{
+.card-travel {
   width: 300px;
-
 }
 
 .table-info {
@@ -30,8 +28,8 @@ form {
   font-size: 60px;
 }
 
-.carousel{
-  width:90%;
+.carousel {
+  width: 90%;
   height: 100%;
 }
 
@@ -42,11 +40,10 @@ a {
 .img-form_product {
   height: 400px;
   width: 1000px;
-  
 }
 
 .form-product {
-  width:400px;
+  width: 400px;
 }
 
 .img_form_emp {
