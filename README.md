@@ -2,10 +2,11 @@
 
 * Signin - Signup (Autenticación mediante correo electrónico).
 * Sitio e-commerce / ruta admin para crear, editar y eliminar productos y empleados (sólo usuarios autorizados).
+* Recibirás un mail de confirmación de tu compra.
 
 # Instalar dependencias
 
-*npm install:
+- npm install (node_modules)
 - express
 - express-session
 - hbs
