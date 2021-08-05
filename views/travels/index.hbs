@@ -1,21 +1,15 @@
 <div class="container-fluid">
-  <div class="d-flex flex-column flex-md-row align-items-center pb-3 m-4 border-bottom">
-
-  
-        <i class='bx bx-lg bxs-user-circle bx-burst me-3' style='color: #0169A6;'></i>
-        <span class="fs-4">{{user.username}}</span>
+   <div class="d-flex flex-column flex-md-row align-items-center pb-3 m-4 border-bottom">  
+        <span class="fs-3">{{user.username}}</span>
         <span class="ms-3 text-muted">({{user.country}})</span>
-        <a class="btn btn-outline-secondary ms-3" href="/user/edit/{{user.id}}">Editar datos</a>
-
-      <nav class="d-flex mt-2 mt-md-0 ms-md-auto"></nav>
-      
-        
-      </nav>
+        <a class="btn btn-outline-secondary ms-3" href="/user/edit/{{user.id}}">Editar perfil</a>
+        <i class='bx bx-lg bxs-user-circle bx-burst ms-auto' style='color: #0169A6;'></i>
+        <span class="ms-auto fs-5">{{user.email}}</span>
   </div>
 
   <div class="row m-5 d-flex align-items-center">
     <div class="col-4">
-      <h1 class="display-4 fw-normal me-3 ">Bienvenido a su proximo destino!</h1>
+      <h1 class="display-4 fw-normal me-auto ">Bienvenido a su proximo destino!</h1>
     </div>
     <div class="col-8">
       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">

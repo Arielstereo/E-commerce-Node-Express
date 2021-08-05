@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const model = require('./../../models/employees');
+const {validateEmp} = require('./../../middlewares/validateEmployees');
 
 const getEmployees = async(req, res)=> {
     const employees = await model.getAll();
@@ -36,7 +37,7 @@ const updateEmployee = async(req, res) => {
 
 router.get('/', getEmployees);
 router.get('/create', (req, res)=>{res.render('admin/createEmployee')});
-router.post('/create', createEmployee);
+router.post('/create', validateEmp, createEmployee);
 router.get('/delete/:id', deleteEmployee);
 router.get('/update/:id', getEmployee);
 router.post('/update/:id', updateEmployee);

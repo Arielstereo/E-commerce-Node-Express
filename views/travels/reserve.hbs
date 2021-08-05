@@ -7,10 +7,30 @@
                     <p class="card-text">{{product.description}}.</p>
                     <p class="card-text">Precio: $ {{product.price}}</p>
                     <img class="img-fluid" src="/images/{{product.uid}}" alt="img">
-                    <div class="mt-3" >
-                   
-                    <a href="/travels/buy" class="btn btn-lg btn-success ms-5">Comprar</a>
+                    <div class="mt-3" >                  
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-lg btn-success ms-5">Comprar</button>
                     </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-dark text-light">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Estas por comprar este paquete!!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Al hacer click en el boton de comprar estas aceptando las condiciones.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                             <a href="/travels/buy" type="button" class="btn btn-primary">Seguir con la compra</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+
                 </div>
             </div>
 
