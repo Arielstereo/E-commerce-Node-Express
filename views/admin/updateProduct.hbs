@@ -5,7 +5,6 @@
 
     <table class="table table-dark table-striped table-hover m-5">
         <tr>
-            <th>id</th>
             <th>Destino</th>
             <th>Imagen</th>
             <th>Editar</th>
@@ -13,7 +12,6 @@
         </tr>
         {{#each products}}
         <tr>
-            <td>{{id}}</td>
             <td>{{city}}</td>     
             <td><img class="img-fluid" src="/images/{{uid}}" alt="img"></td>   
             <td> <a href="/admin/products/update/{{id}}" class="btn btn-success" ><i class='bx bxs-edit bx-sm' style='color:#ffffff;'  ></i></a> </td>
