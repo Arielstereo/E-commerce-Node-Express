@@ -29,8 +29,9 @@ form {
 }
 
 .carousel {
-  width: 90%;
-  height: 100%;
+  width: 60%;
+  border: 3px solid #0169A6;
+  border-radius: 10px;
 }
 
 a {
