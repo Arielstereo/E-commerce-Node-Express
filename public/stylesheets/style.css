@@ -69,3 +69,12 @@ a {
   padding: 150px;
   margin: 100px;
 }
+
+.input-search {
+  width: 500px;
+  margin-left: 180px;
+}
+
+.bx-search-alt {
+  margin-right: 25px;
+}

@@ -42,6 +42,7 @@ const update = async(req, res) => {
 }
 
 
+
 router.get('/create', showCreate);
 router.post('/create', upload.single("img"), create);
 router.get('/', getProducts);

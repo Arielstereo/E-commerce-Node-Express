@@ -109,10 +109,20 @@ const delImg = async(id) => {
     }
 }
 
+const getCity = async(city) => {
+    try {
+        const query = "SELECT p.id, p.city, p.description, p.price, p.id_category, i.uid FROM ?? AS p JOIN ?? AS i ON p.id = i.id_product JOIN ?? AS c ON c.id = p.id_category WHERE p.city LIKE ? AND p.removed = 0";
+        const params = [process.env.T_PRODUCTS, process.env.T_IMAGES, process.env.T_CATEGORY, city];
+        return await pool.query(query, params);
+    } catch (error) {
+        console.error(error);
+    }
+}    
 
 
 
-module.exports = {create, createImg, getUSA, getEuro, getSudam, getCaribe, getAll, getSingle, update, updateImg, delProduct, delImg};
+
+module.exports = {create, createImg, getUSA, getEuro, getSudam, getCaribe, getAll, getSingle, update, updateImg, delProduct, delImg, getCity};
 
 
 

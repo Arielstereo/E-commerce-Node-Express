@@ -15,12 +15,25 @@
 <!-- MAIN CONTENT -->
 <main>
 
-<div class="title">
+<div class="row">
+  
+    <div class="title col-12">
+      <h1 class="text-center p-5 border-bottom">Elige tu próximo destino!</h1>
+    </div>
+    <div class="form mt-3">
 
-  <h1 class="text-center m-5">Elige tu próximo destino!</h1>
-  <h5 class="text-center text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quaerat in praesentium harum voluptatem dolorum unde eos, nesciunt minima, explicabo hic odit facilis optio delectus. Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, quaerat! </h5>
+    <form action="/travels/" method="POST">
+        <div class="input-group input-search">
+         <i class='bx bx-search-alt bx-burst' style='color:#0169a6'></i>
+         <input type="text" name="search" class="form-control" placeholder="Buscar una ciudad">
+        <button class="btn btn-outline-success">Buscar</button>
+        </div>
+    </form>
 
-</div>
+    </div>
+ 
+</div>  
+
 
 
   <div class="m-5 d-flex justify-content-center">
