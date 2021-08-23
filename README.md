@@ -1,47 +1,72 @@
-# E-fligh Web
+# E-fligh Web  
 
-* Signin - Signup (Autenticación mediante correo electrónico).
-* Sitio e-commerce / ruta admin para crear, editar y eliminar productos y empleados (sólo usuarios autorizados, seteados en la base de datos con admin=1).
-* Recibirás un mail de confirmación de tu compra.
+![screenshot_E-fligt Web](./public/images/Screenshot.png)
 
-# Instalación
+* Sitio e-commerce. Ruta admin para crear, editar y eliminar productos y empleados (sólo usuarios autorizados, seteados en la base de datos con admin=1.  
 
-- npm install
+* Signin - Signup (Autenticación mediante correo electrónico).  
 
-# Server en localhost: 3000
+* Recibirás un mail de confirmación de tu compra.  
 
-Ejecutar XAMPP (descarga en https://www.apachefriends.org/es/download.html), en el panel de control activar los servicios mysql y Apache.
-Importar la base de datos.
-Ejecutar nodemon npm start
 
-# Variables de entorno
 
-- Base de datos
+## Instalación
+```
+npm install
+```
+## Server en localhost: 3000
 
-DB_HOST = "localhost"
-DB_USER = "root"
-DB_PASSWORD = ""
-DB_PORT = 3306
+1. Ejecutar XAMPP ([descarga XAMPP](https://www.apachefriends.org/es/download.html)) 
+  
+2. En el panel de control activar los servicios mysql y Apache.  
+
+3. Importar la base de datos (tp_final.sql). 
+
+4. Ejecutar ``npm start``.  
+
+
+### Variables de entorno:
+
+#### **Base de datos**
+```
+DB_HOST = "localhost"  
+
+DB_USER = "root"  
+
+DB_PASSWORD = ""  
+
+DB_PORT = 3306  
+
 DB_DATABASE = "tp_final"
+```
 
-- Tablas
+#### **Tablas**
 
-T_USERS = "users"
-T_PRODUCTS = "products"
-T_IMAGES = "images"
-T_CATEGORY = "category"
-T_EMPLOYEES = "employees"
+``` T_USERS = "users"  
 
-- Mail
+T_PRODUCTS = "products"  
 
-MAIL_SERVICE = "(servicio de mail)"
-MAIL_USER = "(mail)"
-MAIL_PASSWORD = "(password)"
+T_IMAGES = "images"  
 
-- Server
+T_CATEGORY = "category"  
 
-URL_SERVER = "http://localhost"
+T_EMPLOYEES = "employees"  
+
+```
+#### **Mail**
+```
+MAIL_SERVICE = "(servicio de mail)"  
+
+MAIL_USER = "(mail)"  
+
+MAIL_PASSWORD = "(password)"  
+
+```
+#### **Server**
+```
+URL_SERVER = "http://localhost"  
+
 URL_PORT = 3000
 
-
+```
 

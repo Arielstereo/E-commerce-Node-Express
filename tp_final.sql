@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-08-2021 a las 16:16:58
+-- Tiempo de generación: 23-08-2021 a las 21:00:46
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.1
 
@@ -69,7 +69,8 @@ INSERT INTO `employees` (`id`, `name`, `surname`, `sector`, `file_number`, `remo
 (1, 'Juan', 'Perez', 'Ventas', 1258, 0, '2021-07-27 17:11:41', '2021-07-28 13:25:25'),
 (2, 'Fabián', 'Gutierrez', 'Administración', 2053, 0, '2021-07-27 19:12:13', '2021-07-27 19:12:13'),
 (3, 'Laura', 'Sosa', 'Call-center', 1366, 0, '2021-07-27 19:14:36', '2021-07-27 19:27:40'),
-(4, 'Jazmin', 'Denver', 'Ventas', 2666, 0, '2021-08-02 11:15:00', '2021-08-02 11:15:41');
+(4, 'Jazmin', 'Denver', 'Ventas', 2666, 0, '2021-08-02 11:15:00', '2021-08-02 11:15:41'),
+(5, 'Gustavo', 'Fernandez', 'Call-center', 8965, 0, '2021-08-04 17:37:15', '2021-08-05 11:29:35');
 
 -- --------------------------------------------------------
 
@@ -101,7 +102,12 @@ INSERT INTO `images` (`id`, `uid`, `id_product`, `removed`, `ts_create`, `ts_upd
 (8, '3bc59a3e-339f-49c7-96f8-5a7bce4cff4c.jpeg', 9, 0, '2021-07-15 11:20:37', '2021-07-15 11:20:37'),
 (9, 'fe0a51bf-b73d-41e6-8e93-b9e7071df1ef.jpeg', 10, 0, '2021-07-20 15:48:10', '2021-07-20 15:48:10'),
 (10, '51beac2c-5f35-4e7d-b839-2a420ce00633.jpeg', 11, 0, '2021-07-23 23:58:29', '2021-07-23 23:58:29'),
-(11, '96eb5415-a1f1-4e57-874d-fcb1bddaee63.jpeg', 17, 0, '2021-07-27 18:11:13', '2021-07-27 18:11:13');
+(11, '96eb5415-a1f1-4e57-874d-fcb1bddaee63.jpeg', 17, 0, '2021-07-27 18:11:13', '2021-07-27 18:11:13'),
+(12, '91da7236-cc8d-4c61-a722-899cea4551ab.jpeg', 18, 0, '2021-08-09 11:19:15', '2021-08-09 11:19:15'),
+(13, '9bc4127c-16bd-446b-97f8-71e2192c516f.jpeg', 19, 0, '2021-08-09 11:20:56', '2021-08-09 11:20:56'),
+(14, 'db2115bd-f833-4171-9977-79e44eccfb2c.jpeg', 20, 0, '2021-08-09 11:24:19', '2021-08-09 11:24:19'),
+(15, 'd22e2baf-d802-4dd1-b9db-c37c32604962.jpeg', 21, 0, '2021-08-09 11:25:32', '2021-08-09 11:25:32'),
+(16, '1cccbbb9-7390-4a8e-8e03-9c8a29cb3f5d.jpeg', 22, 0, '2021-08-09 11:28:11', '2021-08-09 11:28:11');
 
 -- --------------------------------------------------------
 
@@ -129,8 +135,8 @@ INSERT INTO `products` (`id`, `city`, `description`, `price`, `id_category`, `re
 (2, 'Cancún', 'vuelos incluidos/all-inclusive/excursiones', 250000, 1, 0, '2021-07-12 16:49:36', '2021-07-13 11:46:11'),
 (3, 'Orlando', 'vuelos incluidos/all-inclusive/entradas a los parques', 415000, 3, 0, '2021-07-12 16:57:55', '2021-07-20 16:06:46'),
 (4, 'Paris', 'vuelos incluidos/all-inclusive', 325000, 2, 0, '2021-07-12 17:07:59', '2021-07-13 11:46:21'),
-(6, 'Cataratas del Iguazú', 'vuelos incluidos/all-inclusive/excursiones', 185000, 4, 0, '2021-07-14 13:13:07', '2021-07-22 12:17:12'),
-(7, 'Punta Cana', 'vuelos incluidos/all-inclusive', 320000, 1, 0, '2021-07-15 11:16:03', '2021-07-15 11:16:03'),
+(6, 'Cataratas', 'vuelos incluidos/all-inclusive/excursiones', 185000, 4, 0, '2021-07-14 13:13:07', '2021-08-09 11:26:48'),
+(7, 'Punta Cana', 'vuelos incluidos/all-inclusive/paseos en lancha', 320000, 1, 0, '2021-07-15 11:16:03', '2021-08-09 11:20:03'),
 (8, 'Rio de Janeiro', 'vuelos incluidos/all-inclusive/excursiones', 230000, 4, 0, '2021-07-15 11:17:08', '2021-07-15 11:17:08'),
 (9, 'Roma', 'vuelos incluidos/all-inclusive/excursiones', 210000, 2, 0, '2021-07-15 11:20:37', '2021-07-15 11:20:37'),
 (10, 'Las Vegas', 'vuelos incluidos/all-inclusive', 299000, 3, 0, '2021-07-20 15:48:09', '2021-07-20 15:48:09'),
@@ -140,7 +146,12 @@ INSERT INTO `products` (`id`, `city`, `description`, `price`, `id_category`, `re
 (14, 'Buenos Aires', 'vuelos incluidos/all-inclusive/excursiones', 100000, 4, 0, '2021-07-27 17:50:19', '2021-07-27 17:50:19'),
 (15, 'Buenos Aires', 'vuelos incluidos/all-inclusive/excursiones', 10000000, 4, 0, '2021-07-27 17:55:49', '2021-07-27 17:55:49'),
 (16, 'Buenos Aires', 'vuelos incluidos/all-inclusive/excursiones', 180200, 4, 0, '2021-07-27 18:03:55', '2021-07-27 18:03:55'),
-(17, 'Buenos Aires', 'vuelos incluidos/all-inclusive/excursiones', 123000, 4, 0, '2021-07-27 18:11:12', '2021-07-27 18:11:12');
+(17, 'Buenos Aires', 'vuelos incluidos/all-inclusive/excursiones', 123000, 4, 0, '2021-07-27 18:11:12', '2021-07-27 18:11:12'),
+(18, 'San Andrés', 'vuelos incluidos/all-inclusive/excursiones', 366000, 1, 0, '2021-08-09 11:19:14', '2021-08-09 11:19:14'),
+(19, 'Isla Margarita', 'vuelos incluidos/all-inclusive/excursiones', 299000, 1, 0, '2021-08-09 11:20:55', '2021-08-09 11:20:55'),
+(20, 'Madrid', 'vuelos incluidos/all-inclusive/city-tour', 254000, 2, 0, '2021-08-09 11:24:19', '2021-08-09 11:24:19'),
+(21, 'Londres', 'vuelos incluidos/all-inclusive/excursiones', 322000, 2, 0, '2021-08-09 11:25:32', '2021-08-09 11:25:32'),
+(22, 'Punta del Este', 'vuelos incluidos/all-inclusive/city-tour', 144000, 4, 0, '2021-08-09 11:28:11', '2021-08-09 11:28:11');
 
 -- --------------------------------------------------------
 
@@ -169,7 +180,7 @@ INSERT INTO `users` (`id`, `username`, `pass`, `email`, `authEmail`, `country`, 
 (8, 'Alejandra', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'arielstereo21@gmail.com', '1a8702d9-71ed-4016-9367-531b6bd80ace', 'chile', 1, 0, '2021-07-06 11:11:04', '2021-08-02 11:13:29'),
 (9, 'jazmin', '47e30d8f8eba5cf3519829c8db7cf2248e45176d', 'arielstereo@msn.com', 'bfa3bcf9-7977-4800-8029-1d6766bac9f0', 'argentina', 1, 1, '2021-07-10 12:38:34', '2021-07-11 13:23:25'),
 (12, 'sebastian', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'arielstereo21@gmail.com', 'd9adf931-a3b9-4531-8739-ecaa85c9e1b2', 'argentina', 1, 0, '2021-07-24 00:12:21', '2021-07-24 00:13:23'),
-(13, 'ariel', '84cbb8cb3aaa7a5a5f98ab30b5b0c948cca74f93', 'arielstereo@msn.com', 'af1213af-083f-44cc-bddb-1af70d6b7499', 'brasil', 1, 0, '2021-07-27 11:15:29', '2021-07-27 11:16:16');
+(13, 'Ariel', '84cbb8cb3aaa7a5a5f98ab30b5b0c948cca74f93', 'arielstereo@msn.com', 'af1213af-083f-44cc-bddb-1af70d6b7499', 'argentina', 1, 0, '2021-07-27 11:15:29', '2021-08-03 10:37:53');
 
 --
 -- Índices para tablas volcadas
@@ -221,19 +232,19 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
