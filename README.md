@@ -2,32 +2,32 @@
 
 ![screenshot_E-fligt Web](./public/images/Screenshot.png)
 
-* Sitio e-commerce. Ruta admin para crear, editar y eliminar productos y empleados (sólo usuarios autorizados, seteados en la base de datos con admin=1.  
+* E-commerce site. Admin path to create, edit, delete products and employees (only authorized users, set in the database with admin = 1).
 
-* Signin - Signup (Autenticación mediante correo electrónico).  
+* Signin - Signup (Authentication via email).
 
-* Recibirás un mail de confirmación de tu compra.  
+* You will receive a confirmation email of your purchase.
 
 
-
-## Instalación
+## Install
 ```
 npm install
 ```
-## Server en localhost: 3000
+## Run the app
 
-1. Ejecutar XAMPP ([descarga XAMPP](https://www.apachefriends.org/es/download.html)) 
+1. Run XAMPP ([XAMPP download](https://www.apachefriends.org/es/download.html)) 
   
-2. En el panel de control activar los servicios mysql y Apache.  
+2. In the control panel activate the mysql and Apache services.
 
-3. Importar la base de datos (tp_final.sql). 
+3. Import the database (tp_final.sql).
 
-4. Ejecutar ``npm start``.  
+4. Execute `` npm start``.
 
+5. Server in localhost:3000 
 
-### Variables de entorno:
+### Environment Variables:
 
-#### **Base de datos**
+#### **Database**
 ```
 DB_HOST = "localhost"  
 
@@ -40,7 +40,7 @@ DB_PORT = 3306
 DB_DATABASE = "tp_final"
 ```
 
-#### **Tablas**
+#### **Tables**
 
 ``` T_USERS = "users"  
 
@@ -55,7 +55,7 @@ T_EMPLOYEES = "employees"
 ```
 #### **Mail**
 ```
-MAIL_SERVICE = "(servicio de mail)"  
+MAIL_SERVICE = "(mail service)"  
 
 MAIL_USER = "(mail)"  
 
